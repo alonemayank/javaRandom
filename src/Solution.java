@@ -105,14 +105,20 @@ class Solution {
     }
 
     public static void main(String[] args) {
-
+        //Paran balancing
         stackParan("[{()}]");
         stackParan("[{()]");
 
+
+        //Reverse String
         reverseString("Hello");
+
+        //Find fwd difference in array
         int[] temparr= {1,2,3,4,10,7,1};
         maxFWD(temparr);
 
+
+        //implement Q using stack
         qStack(1,1);
         qStack(1,2);
         qStack(1,3);
@@ -122,16 +128,21 @@ class Solution {
         qStack(1,5);
         qStack(2,5);
 
+        //Print generic
         Integer[] i1 = {1,2,3,4,5};
         gens(i1);
 
-
+        // Use call constructor
         Base b = new Base(5);
         System.out.println(b.toString());
+
+        //Find GCD
         GCD gcd = new GCD();
         System.out.println(gcd.gcd(2,25));
         System.out.println(gcd.gcd(5,25));
         System.out.println(gcd.gcd(25,0));
+
+        //Sort HashMap and Preserve order in which they inserted in linked list
 
         HashMapSort hms = new HashMapSort();
 
@@ -146,5 +157,17 @@ class Solution {
         hms.sortHashMap(lhm);
 
 
+        // Find if any duplicate in array
+        DuplicateArray da = new DuplicateArray();
+        Integer[] arr1 = {1,2,3,4,5,5};
+        String[] arr2 = {"One","Two"};
+        da.duplicate(arr1);
+        da.duplicate(arr2);
+
+
+        // Reverse Sentence
+
+        ReverseWords rw = new ReverseWords();
+        rw.reverseWords("This is a sentence");
     }
 }
