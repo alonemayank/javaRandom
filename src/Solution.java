@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.Stack;
 
 //Class
@@ -127,6 +128,23 @@ class Solution {
 
         Base b = new Base(5);
         System.out.println(b.toString());
+        GCD gcd = new GCD();
+        System.out.println(gcd.gcd(2,25));
+        System.out.println(gcd.gcd(5,25));
+        System.out.println(gcd.gcd(25,0));
+
+        HashMapSort hms = new HashMapSort();
+
+        LinkedHashMap<String,String> lhm = new LinkedHashMap<>();
+
+        lhm.put("One","3");
+        lhm.put("Two","5");
+        lhm.put("Three","6");
+        lhm.put("Four","7");
+        lhm.put("Five","1");
+
+        hms.sortHashMap(lhm);
+
 
     }
 }
