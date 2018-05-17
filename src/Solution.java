@@ -169,5 +169,13 @@ class Solution {
 
         ReverseWords rw = new ReverseWords();
         rw.reverseWords("This is a sentence");
+
+        //Star elimination
+
+        StarElimination se = new StarElimination();
+        se.eliminate("ab* c*d");
+
+        //Eliminating preceding and succeding chars with *
+        se.eliminateAdvance("ab*** cd*dsd** **sd");
     }
 }
