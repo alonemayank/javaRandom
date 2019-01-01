@@ -11,7 +11,7 @@ public class Permutation
         permutation.permute(new StringBuffer (str),new StringBuffer (""));
     }
 
-    
+
     private void permute(StringBuffer str, StringBuffer ch){
         if(str.length() == 0){
             System.out.println(ch);
