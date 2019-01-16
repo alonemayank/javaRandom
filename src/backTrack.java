@@ -51,6 +51,28 @@ public class backTrack {
         }
     }
 
+    public int strStr(String haystack, String needle) {
+        if(needle.length() == 0) return 0;
+        int start = 0;
+        int len = haystack.length();
+        while(start < len){
+            if(haystack.charAt(start) == needle.charAt(0)){
+                int fast = start;
+                int n = 0;
+                boolean flag = true;
+                while(fast < len && n < needle.length()){
+                    if(haystack.charAt(fast++) != needle.charAt(n++)){
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag && n == needle.length()) return start;
+            }
+            start++;
+        }
+
+        return -1;
+    }
 
 
     public static void main(String args[]){
@@ -58,6 +80,7 @@ public class backTrack {
         backTrack obj = new backTrack();
         System.out.println(obj.combination(new int[]{1,2,3}));
         System.out.println(obj.subsets(new int[]{1,2,3}));
+        System.out.println(obj.strStr("hello", "ll"));
     }
 
 }
